@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic | CPS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="Whole-page">
+
+        <header>
+            <nav class="container">
+                <h1>Automatic <span class="g-color">CPS</span></h1>
+                <ul class="navigation hone-navigation">
+                    <li class="active" style="--i:1;"><a href="#main">Home</a></li>
+                    <li style="--i:2;"><a href="#about">About</a></li>
+                    <li style="--i:3;"><a href="#services">Records</a></li>
+                    <li style="--i:4;"><a href="#projects">Controls</a></li>
+                    <li style="--i:5;"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hambarger" onclick="hambarger()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </nav>
+        </header>
+
+        <section id="record">
+            <div class="container">
+                <h2 class="h2 section-heading">System <span class="g-color">Records</span></h2>
+                <div class="record-control">
+                    <div class="btns-rec">
+                        <button class="btn-records btn-new">New</button>
+                        <button class="btn-records btn-edit">Edit</button>
+                        <button class="btn-records btn-del">Delete</button>
+                    </div>
+                    <div class="finds">
+                        <select name="sort" id="sort">
+                            <option value="sort-by">Sort By</option>
+                            <option value="no">No.</option>
+                            <option value="vehicle">vehicle NO.</option>
+                            <option value="entery">Entery Time</option>
+                            <option value="exit">Exit Time</option>
+                            <option value="bill">Bill Amount</option>
+                            <option value="status">Status</option>
+                        </select>
+                        <input type="search" class="search" placeholder="Search">
+                    </div>
+                </div>
+                <div id="mod">
+                    <div class="m-container">
+                        <form>
+                            <p id="cross">x</p>
+                            <div class="input-group">
+                                <label for="roll-no">No.</label>
+                                <input type="number" id="roll-no" placeholder="Enter Number">
+                            </div>
+                            <div class="input-group">
+                                <label for="name">vehicle No.</label>
+                                <input type="text" id="name" placeholder="Enter Vehicle Number" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="office">Entery Time</label>
+                                <input type="datetime-local" id="office" placeholder="Enter your Entery Time" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="age">Exiting Time</label>
+                                <input type="datetime-local" id="age" placeholder="Enter Exiting Timer">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Bill Amount</label>
+                                <input type="number" id="email" placeholder="Enter Bill Amount">
+                            </div>
+                            <div class="input-group">
+                                <label for="phone">Status</label>
+                                <input type="text" id="phone" placeholder="Enter status">
+                            </div>
+                            <button id="submit-btn" onclick="return validate_submit()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <table class="table"  cellspacing="5" cellpadding="30">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Vichcle No. </th>
+                            <th>Entery Time</th>
+                            <th>Exiting Time</th>
+                            <th>Bill Amount</th>
+                            <th>Status</th>
+                            <!-- <td><p class="del-box" onclick="deleteRow(this)">x</p></td> -->
+                        </tr>
+                    </thead>
+                    <tbody id="all-data">
+                        <tr>
+                            <td>1</td>
+                            <td>NBP 4440 <sup>15</sup></td>
+                            <td>21/03/25 12:35am</td>
+                            <td>21/03/25 12:47pm</td>
+                            <td>62</td>
+                            <td>Exited</td>
+                            <!-- <td><p class="del-box" onclick="deleteRow(this)">x</p></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>Copyright © Design by Arslan Asif, All right reserved.</footer>
+
+    </div>
+
+    <script src="./javascript.js"></script>
+    <script>
+        let isLogin = localStorage.getItem('login')
+        if (isLogin == null) location.href = './login-page.html';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic | CPS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="Whole-page">
+
+        <header>
+            <nav class="container">
+                <h1>Automatic <span class="g-color">CPS</span></h1>
+                <ul class="navigation hone-navigation">
+                    <li class="active" style="--i:1;"><a href="#main">Home</a></li>
+                    <li style="--i:2;"><a href="#about">About</a></li>
+                    <li style="--i:3;"><a href="./records.html">Records</a></li>
+                    <li style="--i:4;"><a href="#projects">Controls</a></li>
+                    <li style="--i:5;"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hambarger" onclick="hambarger()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </nav>
+        </header>
+
+        <section id="main">
+            <div class="main-container container">
+                <div class="main-contant">
+                    <h2 class="h2">Autom<span class="g-color">atic</span></h2>
+                    <h3 class="h3">Car Parking Syatem</h3>
+                    <!-- <p>I provide a full <b class="g-color">Responsive and professional</b> website with pure coding with HTML,CSS and JavaScriot. I have expert to design a business website. </p> -->
+                     <p>The system is designed to address common parking challenges, including unauthorized access, vehicle damages, and security concerns, by integrating advanced technologies </p>
+                    <button class="btn btn-primary">About</button>
+                </div>
+                <div class="main-img">
+                    <span></span>
+                    <img src="./img/img.jpg" alt="My img">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="main-container container">
+                <div class="main-contant">
+                    <h2 class="h2">About <span class="g-color">Me</span></h2>
+                    <h3 class="h3">Automatic CPU</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nam aliquid quia eos unde? Perferendis veniam porro maiores reiciendis molestias consectetur iure odit perspiciatis, nulla libero eaque voluptas repudiandae, a corrupti quod, nisi distinctio accusamus ab vero est? Laudantium possimus quaerat reprehenderit, non voluptate qui incidunt.</p>
+                    <button class="btn btn-primary">Contact US</button>
+                </div>
+                <div class="main-img">
+                    <span></span>
+                    <img src="./img/img.jpg" alt="My img">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="h2 section-heading">Contact <span class="g-color">Me!</span></h2>
+            <div class="contact-container container">
+                <form>
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Adress">
+                    <input type="tel" placeholder="Phone Number">
+                    <input type="tel" placeholder="Email Subject">
+                    <textarea rows="8" placeholder="Type Message"></textarea>
+                </form>
+                <button class="btn btn-primary">Send Message</button>  
+            </div>
+        </section>
+
+        <footer>Copyright © Design by Arslan Asif, All right reserved.</footer>
+
+    </div>
+
+    <script src="./javascript.js"></script>
+    <script>
+        let isLogin = localStorage.getItem('login')
+        if (isLogin == null) location.href = './login-page.html';
+    </script>
+</body>
+</html>

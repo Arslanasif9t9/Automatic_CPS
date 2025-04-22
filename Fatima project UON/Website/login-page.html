@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-page">
+        <div id="login-box">
+            <h3 class="h3 login-heading">Automatic <span class="g-color">CPS</span></h3>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Type your password">
+                <button id="eye" class="show" onclick="eyeclick()">Show</button>
+            </div>
+            <button class="login-btn" onclick="logIn()">Log in</button>
+            <span id="submit-error"></span>
+            <!-- <button class="btn-2"><a class="a" href="./signin-page.html">sign up</a></button> -->
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
